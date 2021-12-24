@@ -1,0 +1,7 @@
+{
+  "name": "atelier2-ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

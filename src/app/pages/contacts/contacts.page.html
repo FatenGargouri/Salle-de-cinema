@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Avis</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <p style="font-weight: bold;">Notez un film sur 10 :</p>
+  <ion-item-divider>
+    <ion-input placeholder="Nom du film" [(ngModel)]="nomModel"></ion-input>
+    <ion-input type="number" placeholder="Note sur 10" [(ngModel)]="noteModel">
+    </ion-input>
+    <ng-container *ngIf="modeModif">
+      <ion-button expand="block" (click)="modifier()">
+        Modifier
+      </ion-button>
+    </ng-container>
+    <ng-container *ngIf="!modeModif">
+      <ion-button expand="block" (click)="inserer()">
+        Insérer
+      </ion-button>
+    </ng-container>
+  </ion-item-divider>
+  <ion-grid>
+    <ion-row *ngIf="TabContacts.length">
+      <ion-col>
+        ID
+      </ion-col>
+      <ion-col>
+        Nom
+      </ion-col>
+      <ion-col>
+        Avis
+      </ion-col>
+      <ion-col size="4" align-text="center">
+        Action
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let c of TabContacts">
+      <ion-col>
+        {{c.id}}
+      </ion-col>
+      <ion-col>
+        {{c.nom}}
+      </ion-col>
+      <ion-col>
+        {{c.avis}}
+      </ion-col>
+      <ion-col size="4">
+        <ion-button (click)="supprimer(c)" size="small" color="danger">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+        <ion-button (click)="activerModif(c)" size="small" color="warning">
+          <ion-icon name="create"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start"></ion-menu-button>
+  <ion-title>
+FonFon Cinema
+  </ion-title>
+  </ion-toolbar>
+ </ion-header>
+ <ion-content [fullscreen]="true">
+ <!-- <ion-button [routerLink]="['/authentification']">Déconnexion</ion-button>-->
+  <ion-grid>
+    <ion-row>
+      <ion-col [routerLink]="['/menu/presentation']">
+      <div class="ion-padding-start">
+      <ion-img src="assets/images/pre.png"></ion-img>
+      <ion-card-content>
+      <ion-card-title style="font-weight: bold;">
+     Présentation
+      </ion-card-title>
+      </ion-card-content>
+      </div>
+      </ion-col>
+      <ion-col size="1">
+      </ion-col>
+        <ion-col [routerLink]="['/menu/propose']">
+        <div class="ion-padding-end">
+        <ion-img src="assets/images/propos.jpg"></ion-img>
+        <ion-card-content>
+        <ion-card-title style="font-weight: bold;">
+       Films proposés
+        </ion-card-title>
+        </ion-card-content>
+        </div>
+        </ion-col>
+        </ion-row>
+    <ion-row>
+    <ion-col [routerLink]="['/menu/movies']">
+    <div class="ion-padding-start">
+    <ion-img src="assets/images/rech.png"></ion-img>
+    <ion-card-content>
+    <ion-card-title style="font-weight: bold;">
+   Recherche films
+    </ion-card-title>
+    </ion-card-content>
+    </div>
+    </ion-col>
+
+    <ion-col size="1">
+    </ion-col>
+      <ion-col [routerLink]="['/menu/endroits']">
+      <div class="ion-padding-end">
+      <ion-img src="assets/images/local.png"></ion-img>
+      <ion-card-content>
+      <ion-card-title style="font-weight: bold;">
+        Localisation
+      </ion-card-title>
+      </ion-card-content>
+      </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1">
+      </ion-col>
+      <ion-row>
+        <ion-col [routerLink]="['/menu/contacts']">
+        <div class="ion-padding-start">
+        <ion-img src="assets/images/av.png"></ion-img>
+        <ion-card-content>
+        <ion-card-title style="font-weight: bold;">
+       Avis
+        </ion-card-title>
+        </ion-card-content>
+        </div>
+        </ion-col>
+        <ion-col (click)=" Deconnecter()">
+        <div class="ion-padding-end">
+        <ion-img src="assets/images/deconnexion.png"></ion-img>
+        </div>
+        <ion-card-content class="ion-padding-start">
+        <ion-card-title style="font-weight: bold;">
+         Déconnexion
+        </ion-card-title>
+      </ion-card-content>
+      </ion-col>
+     </ion-row>
+     </ion-row>
+     </ion-grid>
+   </ion-content>
+   

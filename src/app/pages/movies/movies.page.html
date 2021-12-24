@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Recherchez votre film</ion-title>
+    <ion-searchbar [(ngModel)]="searchTitre"></ion-searchbar>
+  <ion-button slot="end">
+   <ion-button  (click)="searchMovie()">
+     <ion-icon name="search-sharp">
+    </ion-icon>
+</ion-button>
+</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+  <div class="img_box">
+  <img [src]="movieData.imageUrl">
+</div>
+  <h1> {{movieData.title}}</h1>
+  <p>{{movieData.description}}</p>
+
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  
+    <ion-title>Espace d'inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #f="ngForm" (ngSubmit)=" onCreerUtilisateur(f.value)">
+    <ion-item>
+      <ion-input type="text" name="id" placeholder="Identifiant" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" name="pass" placeholder="Mot de passe" ngModel></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block"> Inscription</ion-button>
+    <ion-item>
+    </ion-item>
+    <div class="ion-text-center" (click)="onGoLogin()">
+      J'ai déja un compte
+    </div>
+  </form>
+</ion-content>
